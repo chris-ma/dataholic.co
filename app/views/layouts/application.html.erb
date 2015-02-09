@@ -29,7 +29,12 @@
         ANALYSIS
       </div>
       <div id="nav-profile">
-        profile
+        <% if user_signed_in? %>
+            <%= link_to edit_user_registration_path  do %>
+              Edit profile
+            <% end %>  
+            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        <% end %>
       </div>
     </nav>
 
@@ -37,6 +42,8 @@
 
 
     <%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
   </div>
 
