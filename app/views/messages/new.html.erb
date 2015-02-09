@@ -1,22 +1,24 @@
-<%= form_for @message do |f| %>
+<div id="container">
+  <%= form_for @message do |f| %>
 
-<p> 
-<%= f.label :to %>
-<%= f.text_field :to %>
-</p>
-<p> 
-<%= f.label :from %>
-<%= f.text_field :from %>
-</p>
-<p> 
-<%= f.label :subject %>
-<%= f.text_field :subject %>
-</p>
-<p> 
-<%= f.label :body %>
-<%= f.text_area :body %>
-</p>
-<p>
-  <%= f.submit %>
-</p>
-<% end %>
+  <p> 
+  <%= f.label :to %>
+  <%= f.text_field :to %>
+  </p>
+  <p> 
+  <%= f.label :from %>
+  <%= f.text_field :from %>
+  </p>
+  <p> 
+  <%= f.label :subject %>
+  <%= f.text_field :subject %>
+  </p>
+  <p> 
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
+</div>

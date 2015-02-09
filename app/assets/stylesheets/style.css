@@ -9,7 +9,11 @@
 body, html { 
   margin: 0; 
   font-family: 'Montserrat', sans-serif;
+}
 
+.content-area{
+  padding: 15px;
+  float: left;
 }
 
 
