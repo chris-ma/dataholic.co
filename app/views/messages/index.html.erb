@@ -1,0 +1,13 @@
+<% @messages.each do |message| %>
+
+  <p>
+    <strong>To:</strong> <%= message.to %><br>
+    <strong>From:</strong> <%= message.from %><br>
+    <strong>Subject:</strong> <%= message.subject %><br>
+    <strong>Message:</strong><br>
+     <%= message.body %>
+  </p>
+  <%= link_to "New Message", new_message_url %>
+    <%= link_to "Reply", new_message_url %>
+
+<% end %>
