@@ -42,9 +42,9 @@ group :development, :test do
 
     #testing
   gem 'spring-commands-rspec'
-  gem 'jasmine-rails'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'factory_girl_rails'
 
 end
 
