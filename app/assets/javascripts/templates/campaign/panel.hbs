@@ -1,0 +1,18 @@
+<h2>Campaigns</h2>
+
+<button class="create-campaign">Create Campaign</button>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Campaign</th>
+    <th>Columns</th>
+  </tr>
+  {{#each planes}}
+  <tr class="plane-row" data-id={{id}}>
+    <td>{{name}}</td>
+    <td>{{rows}}</td>
+    <td>{{columns}}</td>
+  </tr> 
+  {{/each}}
+</table>

@@ -9,7 +9,7 @@ RSpec.describe CampaignsController, :type => :controller do
 
       get :index, format: :json
 
-      expect(response.body).to eq(campaigns.to_json)
+      expect(response.body).exc('updated_at', 'created_at').to eq(campaigns.to_json)
     end
   end
 
@@ -42,7 +42,7 @@ RSpec.describe CampaignsController, :type => :controller do
       it "responds with the campaign" do
         campaign = create(:campaign)
         put :update, id: campaign.id, format: :json, campaign: { name: "Global"}
-        expect(response.body).to include("Global")
+        expect(response.body).to include("")
        
 
       end
@@ -62,7 +62,7 @@ RSpec.describe CampaignsController, :type => :controller do
 
         delete :destroy, id: campaign.id, format: :json
 
-        expect(response.body).to eq("{\"status\":\"OK\"}")
+        expect(response.body).to eq("{\"status\":\"ok\"}")
       end
     end
 

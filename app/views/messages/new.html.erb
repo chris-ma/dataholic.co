@@ -1,24 +1,31 @@
 <div id="container">
-  <%= form_for @message do |f| %>
-
-  <p> 
-  <%= f.label :to %>
-  <%= f.text_field :to %>
-  </p>
-  <p> 
-  <%= f.label :from %>
-  <%= f.text_field :from %>
-  </p>
-  <p> 
-  <%= f.label :subject %>
-  <%= f.text_field :subject %>
-  </p>
-  <p> 
-  <%= f.label :body %>
-  <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-  <% end %>
+  <div class="message-area">
+    <%= simple_form_for @message do |f| %>
+    <p> 
+    <%= f.label :to %>
+    <%= f.text_field :to, class: "form-control" %>
+    </p>
+    <p> 
+    <%= f.label :from %>
+    <%= f.text_field :from, class: "form-control" %>
+    </p>
+    <p> 
+    <%= f.label :subject %>
+    <%= f.text_field :subject, class: "form-control" %>
+    </p>
+    <p> 
+    <%= f.label :body %>
+    <%= f.text_area :body, class: "summernote" %>
+    </p>
+    <p>
+      <%= f.submit "Send Mail", class: "btn btn-primary" %>
+    </p>
+    <% end %>
+  </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.summernote').summernote();
+  });
+</script>

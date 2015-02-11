@@ -9,23 +9,23 @@
   <div id="container">
     <nav>
       <div id="nav-logo"> 
-        <%= image_tag src="logo.png"  %>
+        <%= image_tag src="logo.png", class: "hvr-pop"  %>
         DATAHOLIC
       </div>
       <div class="nav-item">        
-        <%= image_tag src="add-campaign.png"  %>
+        <%= link_to (image_tag src="add-campaign.png", class: "hvr-pop" ), campaigns_path  %>
         CAMPAIGN
       </div>
       <div class="nav-item">
-        <%= image_tag src="email.png"  %>
+        <%= link_to (image_tag src="email.png", class: "hvr-pop" ), messages_path %>
         MAILING
       </div>
       <div class="nav-item">
-        <%= image_tag src="survey.png"  %>
+        <%= image_tag src="survey.png", class: "hvr-pop"  %>
         SURVEY
       </div>
       <div class="nav-item">
-        <%= image_tag src="statistical.png"  %>
+        <%= image_tag src="statistical.png", class: "hvr-pop"  %>
         ANALYSIS
       </div>
       <div id="nav-profile">

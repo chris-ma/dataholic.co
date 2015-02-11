@@ -23,6 +23,11 @@ gem 'carrierwave'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'sass-rails', '~> 5.0'
 
+#Mailing
+gem 'simple_form'
+gem 'summernote-rails'
+gem 'font-awesome-rails'
+
 
 
 

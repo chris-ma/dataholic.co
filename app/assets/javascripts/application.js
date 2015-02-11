@@ -10,8 +10,25 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require bootstrap
+//= require summernote
 //= require turbolinks
+//= require handlebars.runtime
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./templates
+//= require_tree ./views
 //= require_tree .
+
+$('[data-provider="summernote"]').each(function(){
+  $(this).summernote({ });
+})
+
+var App = App || {};
+(function(App){
+ Backbone.history.start();
+
+})(App);
+
+
