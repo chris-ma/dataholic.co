@@ -1,3 +1,5 @@
+'use strict';
+
 var App = App ||{}
 
 (function(App){
@@ -8,7 +10,6 @@ var App = App ||{}
         );
       return this;
       }
-
   })
 
 })(App);

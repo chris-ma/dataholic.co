@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :campaigns
   end
 
+  mount Rapidfire::Engine => "/rapidfire"
+
   root 'welcome#index'
    get '*anything', to: "welcome#index"
 

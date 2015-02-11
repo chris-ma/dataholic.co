@@ -41,6 +41,8 @@ body, html {
 
 /*Page Layout*/
 
+
+
 @-webkit-keyframes hvr-pop {
   50% {
     -webkit-transform: scale(1.2);
@@ -128,12 +130,14 @@ nav{
   height: 100vh;
   position: block;
   text-align: center;
+  top: 0;
+  bottom: 0;
 
 }
 
 
 #nav-logo{
-  color: white;
+  color: #EAEAEA;
   padding: 10px;
   display: inline-block;
   vertical-align: middle;
@@ -154,10 +158,10 @@ nav{
 /*Mailer*/
 .message-area{
   float: left;
-  position: block
+  position: relative;
 }
 .note-editable{
-height: 40vh;
+height: 50vh;
 width:80vw;
 
 }

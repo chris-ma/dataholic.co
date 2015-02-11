@@ -15,15 +15,16 @@
 //= require summernote
 //= require turbolinks
 //= require handlebars.runtime
+//= require_tree ./router
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./templates
 //= require_tree ./views
 //= require_tree .
 
-$('[data-provider="summernote"]').each(function(){
-  $(this).summernote({ });
-})
+ $(document).ready(function() {
+    $('.summernote').summernote();
+  });
 
 var App = App || {};
 (function(App){

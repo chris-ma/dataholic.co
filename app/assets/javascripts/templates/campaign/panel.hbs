@@ -5,14 +5,13 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Campaign</th>
-    <th>Columns</th>
+    <th>Description</th>
+    
   </tr>
-  {{#each planes}}
+  {{#each campaign}}
   <tr class="plane-row" data-id={{id}}>
     <td>{{name}}</td>
-    <td>{{rows}}</td>
-    <td>{{columns}}</td>
+    <td>{{description}}</td>
   </tr> 
   {{/each}}
 </table>
