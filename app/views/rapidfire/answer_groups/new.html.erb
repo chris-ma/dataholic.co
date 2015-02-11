@@ -1,13 +1,15 @@
-<div id="container">
-  <h2>Please answer these Questions</h2>
-  <hr/>
+<div class="container">
+    <div class="col-md-10">
+      <h2>Questions</h2>
+      <hr/>
 
-  <%= form_for([@question_group, @answer_group_builder]) do |f| %>
-    <%- @answer_group_builder.answers.each do |answer| %>
-      <%= f.fields_for("#{answer.question.id}", answer) do |answer_form| %>
-        <%= render_answer_form_helper(answer, answer_form) %>
+      <%= form_for([@question_group, @answer_group_builder]) do |f| %>
+        <p><%- @answer_group_builder.answers.each do |answer| %></p>
+          <%= f.fields_for("#{answer.question.id}", answer) do |answer_form| %>
+            <p><%= render_answer_form_helper(answer, answer_form) %></p>
+          <% end %>
+        <% end %>
+        <%= f.submit "Save", class: "btn btn-primary" %>
       <% end %>
-    <% end %>
-    <%= f.submit "Save" %>
-  <% end %>
+    </div>
 </div>

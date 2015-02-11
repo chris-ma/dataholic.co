@@ -1,13 +1,15 @@
-<div id="container">
-  <h2>Mailing Dashboard</h2>
-    <%= link_to "New Message", new_message_url,class: "btn btn-primary" %>
-      <% @messages.each do |message| %>
-        <p>
-          <strong>To:</strong> <%= message.to %><br>
-          <strong>From:</strong> <%= message.from %><br>
-          <strong>Subject:</strong> <%= message.subject %><br>
-          <strong>Message:</strong><br>
-           <%= message.body %>
-        </p>
-      <% end %>
+<div class="container">
+  <div class="col-md-10">
+    <h2>Mailing Dashboard</h2>
+      <%= link_to "New Message", new_message_url,class: "btn btn-primary" %>
+        <% @messages.each do |message| %>
+          <p>
+            <strong>To:</strong> <%= message.to %><br>
+            <strong>From:</strong> <%= message.from %><br>
+            <strong>Subject:</strong> <%= message.subject %><br>
+            <strong>Message:</strong><br>
+             <%= message.body %>
+          </p>
+        <% end %>
+  </div>
 </div>

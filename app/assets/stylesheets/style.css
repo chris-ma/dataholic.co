@@ -40,9 +40,11 @@ body, html {
 /*landing page ends*/
 
 /*Page Layout*/
+.content-area{
+  padding: 10px;
+}
 
-
-
+/*Navigation*/
 @-webkit-keyframes hvr-pop {
   50% {
     -webkit-transform: scale(1.2);
@@ -127,7 +129,7 @@ nav{
   float: left;
   width: 150px;
   background-color: #444;
-  height: 100vh;
+  height: 100%;
   position: block;
   text-align: center;
   top: 0;
@@ -143,7 +145,6 @@ nav{
   vertical-align: middle;
   position: block;
   text-align: center;
-  line-height: 1.2em;
 }
 
 #nav-profile{

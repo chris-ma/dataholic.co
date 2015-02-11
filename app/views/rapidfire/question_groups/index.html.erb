@@ -1,25 +1,29 @@
-<div id="container">
-  <h2>
-    Question Groups
-    <% if can_administer? %>
-      <%= link_to "New Group", new_question_group_path %>
-    <% end %>
-  </h2>
-  <hr/>
-
-  <table>
-    <colgroup>
-      <col>
-      <col width="250">
-    </colgroup>
-    <thead>
-      <tr>
-        <th>Question Group</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <%= render partial: "question_group", collection: @question_groups %>
-    </tbody>
-  </table>
+<div class="container">
+  <div class="col-md-10">
+    <h2>
+      Question management
+    </h2>
+    <hr/>
+      <p>
+        <% if can_administer? %>
+          <%= link_to "New Group", new_question_group_path, class: "btn btn-primary"  %>
+        <% end %>
+      </p>
+      
+    <table>
+      <colgroup>
+        <col>
+        <col width="250">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Question Groups</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "question_group", collection: @question_groups %>
+      </tbody>
+    </table>
+  </div>
 </div>

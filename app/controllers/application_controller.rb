@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def can_administer?
-    current_user = @user
+    current_user = true
   end  
 
 end
